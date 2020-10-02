@@ -1,7 +1,8 @@
 library(Seurat)
 library(ggplot2)
 
-#### MERGE ALL 10X and iCell8 Seurat objects and perform batch-correction with CCA ------------------------
+#### MERGE multiple Seurat objects and perform batch-correction with CCA ------------------------
+#### This example integrates individual objects from 9 patients  
 anchors.3 <- FindIntegrationAnchors(object.list = list(seu.obj1, seu.obj2, seu.obj3, 
                                                        seu.obj4, seu.obj5, seu.obj6, 
                                                        seu.obj7, seu.obj8, seu.obj9), dims = 1:5)
