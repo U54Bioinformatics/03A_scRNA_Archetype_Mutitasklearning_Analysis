@@ -8,7 +8,7 @@ Step 2: Integrate individual Seurat objects and perform batch correction with CC
 
 Step 3: Extract principal components. Try using 5-10 PCs for the analysis.  
 
-Step 4: Determine the number of archetypes. Fit varying number of polytopes and check proportion of variance expplained in the scree plots. 
+Step 4: Determine the number of archetypes. Fit varying number of polytopes and check proportion of variance explained in the scree plots. 
 
 Step 5: Fit the polytope for the optimum number of archtype. This will also return archetype scores for each cell. 
 
