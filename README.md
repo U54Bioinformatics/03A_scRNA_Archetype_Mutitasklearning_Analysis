@@ -2,7 +2,9 @@
 
 #### Required software:
 R (>3.6.3)
+
 R-packages: Seurat, glmnet 
+
 [ParetoTI](https://github.com/vitkl/ParetoTI)
 
 #### Follow these steps to determine the number of archetypes and pathway phenotypes associated with archetypes using scRNA-seq data. 
