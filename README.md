@@ -15,7 +15,7 @@ Prep-step 1: Create Seurat objects for individual scRNA data. Perform QC analyse
 Prep-step 2: Calcular ssGSEA scores using the Bioconductor [GSVA package](https://bioconductor.org/packages/release/bioc/html/GSVA.html). Alternatively, calculate ssGSEA scores using BETSY with ZINB-WaVE normalized scRNA-seq counts data. [Click here for sample workflow](https://github.com/U54Bioinformatics/02C_scRNAseq_Pathway)
 
 
-#### Follow these steps to determine the number of archetypes and pathway phenotypes associated with archetypes using scRNA-seq data. 
+#### Follow these steps to determine the number of archetypes and pathway phenotypes associated with archetypes using scRNA-seq data
 
 Step 1: Integrate individual Seurat objects and perform batch correction using CCA. 
 
