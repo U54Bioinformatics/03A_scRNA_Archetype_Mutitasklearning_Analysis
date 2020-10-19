@@ -1,4 +1,4 @@
-### Archetype analysis and multi task learning to determine pathways associated with archetypes for scRNA data
+# Archetype analysis and multi task learning to determine pathways associated with archetypes for scRNA data
 
 #### Software (tested versions):
 R (>3.6.3)
@@ -15,9 +15,9 @@ Prep-step 1: Create Seurat objects for individual scRNA data. Perform QC analyse
 Prep-step 2: Calcular ssGSEA scores using the Bioconductor [GSVA package](https://bioconductor.org/packages/release/bioc/html/GSVA.html). Alternatively, calculate ssGSEA scores using BETSY with ZINB-WaVE normalized scRNA-seq counts data. [Click here for sample workflow](https://github.com/U54Bioinformatics/02C_scRNAseq_Pathway)
 
 
-#### Follow these steps to determine the number of archetypes and pathway phenotypes associated with archetypes using scRNA-seq data
+## Follow these steps to determine the number of archetypes and pathway phenotypes associated with archetypes using scRNA-seq data
 
-1. Integrate individual Seurat objects and perform batch correction using CCA. 
+#### 1. Integrate individual Seurat objects and perform batch correction using CCA. 
 
 ```{r}
 # load required packages
@@ -29,14 +29,14 @@ anchors.3 <- FindIntegrationAnchors(object.list = list(seu.obj1, seu.obj2, seu.o
 integrated.3 <- IntegrateData(anchorset = anchors.3, dims = 1:5)
 ```
 
-2. Extract principal components from the batch corrected and merged Seurat object. Try using 5-10 PCs for the analysis.  
+#### 2. Extract principal components from the batch corrected and merged Seurat object. Try using 5-10 PCs for the analysis.  
 
 ```{r}
 # Extract the first 10 principal components from the batch-corrected and integrated Seurat object for archetype analysis 
 integrated.10pcs <- FetchData(integrated.3, vars=c("PC_1", "PC_2", "PC_3"))
 ```
 
-3. Determine the number of archetypes. Fit varying number of polytopes and check proportion of variance explained in the scree plots. Choose "k" or the number of archetypes required to enclose the data based on the elbow of the plot.  
+#### 3. Determine the number of archetypes. Fit varying number of polytopes and check proportion of variance explained in the scree plots. Choose "k" or the number of archetypes required to enclose the data based on the elbow of the plot.  
 
 ```{r}
 library(ParetoTI) 
@@ -60,7 +60,7 @@ dev.off()
 
 ```
 
-Step 4: Fit the polytope for the optimum number of archtype. This object will also contain archetype scores for each cell. 
+#### 4: Fit the polytope for the optimum number of archtype. This object will also contain archetype scores for each cell. 
 
 ```{r}
 # Fit the polytopes based on optimal number of archetypes and plot 
@@ -92,7 +92,7 @@ p2
 dev.off()
 ```
 
-Step 5: Use archetype scores to train a multi-task model (group lasso penalty) with hallmark pahtway enrichment scores or gene expression as predictors. The coefficients for the pathways can be used to identify core phenotypes associated with each archetype. 
+#### 5. Use archetype scores to train a multi-task model (group lasso penalty) with hallmark pahtway enrichment scores or gene expression as predictors. The coefficients for the pathways can be used to identify core phenotypes associated with each archetype. 
 
 ```{r}
 library(glmnet)
