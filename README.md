@@ -1,6 +1,9 @@
 # Archetype analysis and multi task learning to determine pathways associated with archetypes for scRNA data
 
-#### Software (tested versions):
+#### Software (tested versions)
+
+System: macOS Catalina, 16GB RAM, 2.8GHz quad-core Intel i7
+
 R (>3.6.3)
 
 R-packages: Seurat (v3.1.5), GSVA (v1.34.0), glmnet (v4.0-2)
