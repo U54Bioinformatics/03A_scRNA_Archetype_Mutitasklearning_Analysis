@@ -1,8 +1,8 @@
 ### Archetype analysis and multi task learning to determine pathways associated with archetypes for scRNA data
 
-Perform the following steps to determine the number of archetypes and pathway phenotypes associated with archetypes using scRNA-seq data. 
+Follow these steps to determine the number of archetypes and pathway phenotypes associated with archetypes using scRNA-seq data. 
 
-Step 1: Create Seurat objects for individual scRNA data. This has to be done before using the example script. Perform QC analysis and filter the data to retain meaningful information, and then export the individual Seurat objects.  
+Step 1: Create Seurat objects for individual scRNA data. This has to be done before using the example script. Perform QC analysis and filter the data to retain meaningful information, and then export the individual Seurat objects. [Click here for sample workflow](https://github.com/U54Bioinformatics/02A_scRNAseq_Seurat)
 
 Step 2: Integrate individual Seurat objects and perform batch correction with CCA. 
 
