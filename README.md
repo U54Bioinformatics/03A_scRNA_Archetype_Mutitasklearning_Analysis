@@ -44,14 +44,14 @@ integrated.3 <- IntegrateData(anchorset = anchors.3, dims = 1:5)
 
 #### 2. Extract principal components from the batch corrected and merged Seurat object. Try using 5-10 PCs for the analysis.  
 
-```{r}
+```r
 # Extract the first 10 principal components from the batch-corrected and integrated Seurat object for archetype analysis 
 integrated.10pcs <- FetchData(integrated.3, vars=c("PC_1", "PC_2", "PC_3"))
 ```
 
 #### 3. Determine the number of archetypes. Fit varying number of polytopes and check proportion of variance explained in the scree plots. Choose "k" or the number of archetypes required to enclose the data based on the elbow of the plot.  
 
-```{r}
+```r
 library(ParetoTI) 
 library(RColorBrewer)
 
@@ -94,7 +94,7 @@ dat = dlmread('~/CCA_CC_mat_nocol.csv', ',');
 
 #### 4: Fit the polytope for the optimum number of archtype. This object will also contain archetype scores for each cell. 
 
-```{r}
+```r
 # Fit the polytopes based on optimal number of archetypes and plot 
 arc_data_t = fit_pch(t(integrated.10pcs), noc = as.integer(3), delta = 0)
 
@@ -126,7 +126,7 @@ dev.off()
 
 #### 5. Use archetype scores to train a multi-task model (group lasso penalty) with hallmark pahtway enrichment scores or gene expression as predictors. The coefficients for the pathways can be used to identify core phenotypes associated with each archetype. 
 
-```{r}
+```r
 library(glmnet)
 
 X <- as.matrix(ssgsea.scores) # ssgsea.scores is matrix of Hallmark ssGSEA pathway enrichment scores calculated using GSVA. Cell IDs are in rownames and pathways in colnames
