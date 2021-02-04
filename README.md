@@ -10,9 +10,11 @@ R-packages: Seurat (v3.1.5), GSVA (v1.34.0), glmnet (v4.0-2)
 
 [ParetoTI package for R](https://github.com/vitkl/ParetoTI)
 
-Several additional algorithms to find positions of the archetypes are available in the original MATLAB implementation of the Pareto Task Inference method. Also, we use this package to calculate the t-ratios and p-value of the archetypes. 
 
-[ParTI package for MATLAB](https://www.weizmann.ac.il/mcb/UriAlon/download/ParTI)
+Several additional algorithms to find positions of the archetypes are available in the original MATLAB implementation of the Pareto Task Inference method. Also, we use this package to calculate the t-ratios and p-value of the archetypes. [ParTI package for MATLAB](https://www.weizmann.ac.il/mcb/UriAlon/download/ParTI)
+
+MATLAB (R2020b)
+
 
 #### Preparing data for analysis:
 The multitask learning analysis performed here requires annotated pre-processed and filtered scRNA-seq data and single-sample gene set enrichment analysis (ssGSEA) scores  corresponding to each cell. 
