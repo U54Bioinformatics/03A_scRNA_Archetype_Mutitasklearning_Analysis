@@ -32,7 +32,7 @@ Alternatively, calculate ssGSEA scores using BETSY with ZINB-WaVE normalized scR
 
 #### 1. Integrate individual Seurat objects and perform batch correction using CCA. 
 
-```{r}
+```r
 # load required packages
 library(Seurat)
 library(ggplot2)
@@ -74,7 +74,7 @@ dev.off()
 ```
 
 The significance and p-value for the selected number of archetypes can be calculated using MATLAB ParTI package.
-```{matlab}
+```matlab
 % Load numerical matrix, with patients as rows and genes as
 % columns. The matrix was exported from the Seurat scRNA-seq object 
 % after CCA normalization and integration 
