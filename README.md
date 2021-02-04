@@ -8,7 +8,11 @@ R (>3.6.3)
 
 R-packages: Seurat (v3.1.5), GSVA (v1.34.0), glmnet (v4.0-2)
 
-[ParetoTI](https://github.com/vitkl/ParetoTI)
+[ParetoTI package for R](https://github.com/vitkl/ParetoTI)
+
+Several additional algorithms to find positions of the archetypes are available in the original MATLAB implementation of the Pareto Task Inference method. Also, we use this package to calculate the t-ratios and p-value of the archetypes. 
+
+[ParTI package for MATLAB](https://www.weizmann.ac.il/mcb/UriAlon/download/ParTI)
 
 #### Preparing data for analysis:
 The multitask learning analysis performed here requires annotated pre-processed and filtered scRNA-seq data and single-sample gene set enrichment analysis (ssGSEA) scores  corresponding to each cell. 
@@ -19,7 +23,7 @@ Sample scRNA-seq data and vignette for integration and visualization can be foun
 
 Also, see this detailed[sample workflow for processing 10X data](https://github.com/U54Bioinformatics/02A_scRNAseq_Seurat) 
 
-2. Calcular ssGSEA scores using the Bioconductor [GSVA package](https://bioconductor.org/packages/release/bioc/html/GSVA.html). 
+2. Calculate ssGSEA scores using the Bioconductor [GSVA package](https://bioconductor.org/packages/release/bioc/html/GSVA.html). 
 
 Alternatively, calculate ssGSEA scores using BETSY with ZINB-WaVE normalized scRNA-seq counts data. [Click here for sample workflow](https://github.com/U54Bioinformatics/02C_scRNAseq_Pathway)
 
