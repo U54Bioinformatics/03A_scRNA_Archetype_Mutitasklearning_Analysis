@@ -75,7 +75,7 @@ dev.off()
 
 The significance and p-value for the selected number of archetypes can be calculated using MATLAB ParTI package.
 ```matlab
-% Load numerical matrix, with patients as rows and genes as
+% Load numerical matrixcin MATLAB, with patients as rows and genes as
 % columns. The matrix was exported from the Seurat scRNA-seq object 
 % after CCA normalization and integration 
 dat = dlmread('~/CCA_CC_mat_nocol.csv', ',');
