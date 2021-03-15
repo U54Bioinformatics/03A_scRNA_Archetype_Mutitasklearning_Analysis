@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/300737070.svg)](https://zenodo.org/badge/latestdoi/300737070)
+
 # Archetype analysis and multi task learning to determine pathways associated with archetypes for scRNA data
 
 #### Software (tested versions)
